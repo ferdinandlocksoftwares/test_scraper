@@ -1,8 +1,0 @@
-Server: Server
-Via: 1.1 9d394c883dbf0ca57ec8d5b803e47539.cloudfront.net (CloudFront)
-Date: Mon, 13 Nov 2017 07:37:36 GMT
-X-Amz-Cf-Id: rUPvHEJfe0gcNpwNo7IsITf22kudKVoRwXAib-10vvWbLOv0AqhhKA==
-Content-Type: text/html
-Vary: Content-Type,Host,Accept-Encoding,User-Agent
-X-Cache: Miss from cloudfront
-Content-Encoding: gzip
