@@ -1,0 +1,8 @@
+Vary: Content-Type,Host,Accept-Encoding,User-Agent
+X-Cache: Miss from cloudfront
+Via: 1.1 13ce65b29463964b57d2dca8c7952968.cloudfront.net (CloudFront)
+Server: Server
+Content-Type: text/html
+Date: Fri, 10 Nov 2017 17:13:15 GMT
+Content-Encoding: gzip
+X-Amz-Cf-Id: xArKme3fazBQ-nKvSi7HOxhvS289sWbJ0q8qtthLNyszywt2KD33ow==

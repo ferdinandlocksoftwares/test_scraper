@@ -1,0 +1,14 @@
+Content-Type: text/html;charset=UTF-8
+P3P: policyref="https://www.amazon.com/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+Server: Server
+Content-Encoding: gzip
+X-Amz-Cf-Id: 1_NDbdVTP86oe1Z42fXcYNFrYEeODHEKVyp4wP-2bu4MAkKahKwo2Q==
+Cache-Control: no-cache
+Pragma: no-cache
+Vary: Accept-Encoding,User-Agent
+Date: Fri, 10 Nov 2017 06:26:19 GMT
+Via: 1.1 2f4fb8827841485282fe2f41ed0d3ab0.cloudfront.net (CloudFront)
+X-Cache: Miss from cloudfront
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Expires: -1
+X-Frame-Options: SAMEORIGIN

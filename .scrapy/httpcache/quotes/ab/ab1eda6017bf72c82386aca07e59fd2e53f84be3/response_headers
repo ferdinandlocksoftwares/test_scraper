@@ -1,0 +1,14 @@
+Content-Encoding: gzip
+Server: Server
+X-Cache: Error from cloudfront
+Date: Fri, 10 Nov 2017 05:38:02 GMT
+Vary: Accept-Encoding,User-Agent
+Set-Cookie: x-wl-uid=1ugIH70LNCdhj9RMGtLVfMKKdAyIpS0WMwKnGAieRIl11kpOT4pxF+L0hUhjF0OcrQk5zUeXW/Ts=; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+Set-Cookie: session-id-time=2082787201l; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+Set-Cookie: session-id=147-3624869-7650658; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+P3P: policyref="https://www.amazon.com/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Amz-Id-1: Y1706JYNWQRKZNE1HTFT
+Via: 1.1 4798af72c7f6cead30e0da0525c1880c.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: zNSQoXZrVK2YKcI14LmLzeJvdKq2IoAzhmVYzsklAMV2PbpaFDXYXg==
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload

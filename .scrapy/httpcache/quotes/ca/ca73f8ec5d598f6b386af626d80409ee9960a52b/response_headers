@@ -1,0 +1,15 @@
+Content-Encoding: gzip
+Server: Server
+X-Cache: Error from cloudfront
+Date: Fri, 10 Nov 2017 05:43:48 GMT
+Vary: Accept-Encoding,User-Agent
+Set-Cookie: ubid-main=131-6000863-9317168; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+Set-Cookie: session-token=LjtojDdwCViIHwbJcueM9nx9XxvXhgNQQpKkPnzFIC/mKgdQ42MPAvYy7F6IxR1G3Uf8IMhxP7IKo+k/5bBb4U+Jw33k1Vs81ikI6nki0NztxeRwCnoZUgwEXUOj8b3Hr3NpeoEqRsxu76ezSI4ID2xTmIMY/HSGh860AST24IBT2Ck0JmvtJ39pus55qIHEppXnVJWctDhHqf7e+Q8XoltGQSx7YGY4YxTb+OS444vgMks6qBNae4nN6hu/0AIt; path=/; domain=.amazon.com; expires=Thu, 05-Nov-2037 05:43:48 GMT
+Set-Cookie: session-id-time=2082787201l; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+Set-Cookie: session-id=140-8974205-3828518; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+P3P: policyref="https://www.amazon.com/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Amz-Id-1: WK2FSSRMX3QQYZ6AKQNH
+Via: 1.1 4798af72c7f6cead30e0da0525c1880c.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: Xi7BpEflWMPRj0mau0sYXv5d5WiLrtQKpmDSxlNPXPBwOCdEFgmg9A==
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload

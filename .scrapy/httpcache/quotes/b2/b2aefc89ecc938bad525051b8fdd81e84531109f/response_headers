@@ -1,0 +1,14 @@
+Expires: -1
+Content-Type: text/html;charset=UTF-8
+Pragma: no-cache
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Content-Language: en-GB
+Content-Encoding: gzip
+Cache-Control: no-cache
+Vary: Accept-Encoding,User-Agent
+X-Cache: Miss from cloudfront
+Via: 1.1 19a0d1c82bae58d0947cf8e5bf899548.cloudfront.net (CloudFront)
+Server: Server
+Date: Fri, 10 Nov 2017 16:59:10 GMT
+X-Frame-Options: SAMEORIGIN
+X-Amz-Cf-Id: I6qciuBn88nwau6KA_iAUJhYYC-6OmD8AEbRCYGJKRBRNi7Eo3uP7A==

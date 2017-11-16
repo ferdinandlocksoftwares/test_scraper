@@ -1,0 +1,15 @@
+Content-Encoding: gzip
+Server: Server
+X-Cache: Error from cloudfront
+Date: Fri, 10 Nov 2017 05:43:03 GMT
+Vary: Accept-Encoding,User-Agent
+Set-Cookie: ubid-main=135-7698366-1942204; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+Set-Cookie: session-token=+5j2DSfBgjyHmJKs5gL+hBvE9vsa2DQS2fCH5KEMPlqpajwtWqEKxHG9+zE/iYoLJPnuJCWL1s15436MAf5ONNImL4cd+JnDKDbMXPiRIxueNVUs4DWiy1EfaRJC+68uWP1TO5TxccHUs4Jx3ujqDiF0QL0COl2+WbVx1nEKCVLWgKpPjNANUqSaf5XPwIG4nC71OVVuFvK0x0tSH/tVhJkoRLMwqx5sBd0XQZ7LtF/3Hk+gFqXFk/QXjijR4Pw5; path=/; domain=.amazon.com; expires=Thu, 05-Nov-2037 05:43:03 GMT
+Set-Cookie: session-id-time=2082787201l; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+Set-Cookie: session-id=131-0295603-1088823; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT
+P3P: policyref="https://www.amazon.com/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Amz-Id-1: QEYJEH9SZSEWG4K68GAJ
+Via: 1.1 4798af72c7f6cead30e0da0525c1880c.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: 6AlX-tOrUnmnSRBKsmRa-YSJea8BvuveGHMNvC5IPu5g6RbVALh2hw==
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload

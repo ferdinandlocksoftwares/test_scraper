@@ -1,0 +1,14 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 896995cdbfd3b24f8191b3e9a75b58f9.cloudfront.net (CloudFront)
+Pragma: no-cache
+Set-Cookie: session-token=3uFT8cxuS90amlaXpZFgr3XXBX+vcFeTr1ugTAE0ct7bbbo3aSO5RBuJaklWhddShYL0bdwIsTH8NCQXNhVhAtRcY4t+0YKsEaA2G/OnrZRUw+TqfVFpxh9QKmvy/Yv8aO80PaUmbnt6CLgCKJaznqIjpfsguJmRs1asAQaRSEw7fblVmZ0PPlT7+eGGEjAj; Domain=.amazon.fr; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+X-Cache: Error from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 07:55:50 GMT
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: 8KZduhvMYu1N5PXmA6lilWIMG_XuUf9eco344UNpz4R4Su9C-F6FXQ==
+Content-Encoding: gzip

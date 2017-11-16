@@ -1,0 +1,15 @@
+Content-Language: en-CA
+X-Amz-Cf-Id: 9-hWHXPP5074vwAG6eo7hEu7lP9RIylNmPP6xOCGoS-Ppf3s-590ig==
+Content-Encoding: gzip
+Server: Server
+Expires: -1
+Content-Type: text/html;charset=UTF-8
+Date: Wed, 15 Nov 2017 15:09:09 GMT
+Via: 1.1 b76b2ba764754504e6069c0777aaecd6.cloudfront.net (CloudFront)
+Cache-Control: no-cache
+Set-Cookie: session-id=133-7262526-2639321; Domain=.amazon.ca; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Vary: Accept-Encoding,User-Agent
+X-Cache: Miss from cloudfront
+Pragma: no-cache
+X-Frame-Options: SAMEORIGIN

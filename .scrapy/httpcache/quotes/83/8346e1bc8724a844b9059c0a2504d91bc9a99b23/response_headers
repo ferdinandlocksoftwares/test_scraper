@@ -1,0 +1,15 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 13d6772a6c475529ef256f63777f2e74.cloudfront.net (CloudFront)
+Pragma: no-cache
+Set-Cookie: session-token=hYPCeD+nSmj689UHFVRaeM3HmMqqSW0iGqC+XEqETw3hbV71HHamkhauXa7f0iNrG2lJJwIgRn1SI5E0WMmyx42G4A8N17l367xB2MYhJINYSvKPYONEL/XV5sHp8OoRHgwIKHOIo6FYQkES+jzwuGh1GRgA/M9+hEXklffpSAkQizqB9rvPdsYN3rENuw/I; Domain=.amazon.de; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+X-Cache: Error from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 08:07:47 GMT
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: nBLe-C3ygG9XirPAcZdw0xeRAmpxkV6k_E3NlXYFeS5CjEAUe6hfBg==
+Content-Encoding: gzip
+P3P: policyref="https://www.amazon.de/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "

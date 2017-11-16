@@ -1,0 +1,14 @@
+Expires: -1
+Content-Type: text/html;charset=UTF-8
+Pragma: no-cache
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Content-Encoding: gzip
+Cache-Control: no-cache
+Vary: Accept-Encoding,User-Agent
+X-Cache: Miss from cloudfront
+Via: 1.1 ccdb7cbbbb012c3ae165f713113ea6e9.cloudfront.net (CloudFront)
+Server: Server
+Date: Fri, 10 Nov 2017 17:02:15 GMT
+P3P: policyref="https://www.amazon.co.uk/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Frame-Options: SAMEORIGIN
+X-Amz-Cf-Id: Nv4eCtZ0yQAW3KlMqb6-YUABGlRcRWYmAH262euwMA2HK1mvFytPdw==

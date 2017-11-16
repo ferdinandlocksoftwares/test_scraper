@@ -1,0 +1,14 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 ff57b3c3d2b9d5516a9fd1a073972fd8.cloudfront.net (CloudFront)
+Pragma: no-cache
+Set-Cookie: ubid-acbca=135-5901343-0329642; Domain=.amazon.ca; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+X-Cache: Miss from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 07:52:15 GMT
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: 9pT1rRckBxt4z1iMEwLfikWpV2cY8GPjxV8zWgNVe6sfApclYzFVcA==
+Content-Encoding: gzip

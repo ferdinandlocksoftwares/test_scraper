@@ -1,0 +1,14 @@
+Expires: -1
+Content-Type: text/html;charset=UTF-8
+Pragma: no-cache
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Content-Encoding: gzip
+Cache-Control: no-cache
+Vary: Accept-Encoding,User-Agent
+X-Cache: Error from cloudfront
+Via: 1.1 af2258de184ecee7791b144db97570b6.cloudfront.net (CloudFront)
+Server: Server
+Date: Fri, 10 Nov 2017 17:01:45 GMT
+P3P: policyref="https://www.amazon.co.uk/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Frame-Options: SAMEORIGIN
+X-Amz-Cf-Id: y2bC485WUyZ5-dEMa5re5vfGZDkokWMqidNkMJXYI8BVdr0-AhE89A==

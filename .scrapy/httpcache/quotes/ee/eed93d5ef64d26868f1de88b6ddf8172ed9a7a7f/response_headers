@@ -1,0 +1,25 @@
+X-Amz-Cf-Id: Buj7NyzUMJmFWWxBuAIfnyo388xbwZPu9hHV3JLpvUanBrsvYj0QbQ==
+Content-Language: es-ES
+Server: Server
+Content-Encoding: gzip
+Set-Cookie: session-id=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: session-id-time=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: session-token=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: ubid-acbes=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: at-acbes=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: lc-acbes=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: x-acbes=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: x-wl-uid=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: sess-at-acbes=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: UserPref=-; path=/; domain=.www.amazon.es; expires=Tue, 15-Nov-2005 16:05:39 GMT
+Set-Cookie: session-token=xAoFrJStBz5Y8egCJZTYAzs5HNMwwjTCxFfnzB11aSApwApIGd2zyvWj/u+IRNp/0Yn9fXkW3SlN2ZMrzpbFLxKGTPSsEN66JV4txrGAKbGms8uJrYgC/bR9LZzs/NC+M9BHLbgusxxDmV7YmZROHxWoHBHK2/LCd5Pb1rCAB2BmygMi0t4V7YHU2aUuDCYt; Domain=.amazon.es; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Via: 1.1 1e37e58235bce32796909427e015e462.cloudfront.net (CloudFront)
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+Date: Wed, 15 Nov 2017 16:05:39 GMT
+Content-Type: text/html;charset=UTF-8
+Vary: Accept-Encoding,User-Agent
+Expires: -1
+Pragma: no-cache
+X-Cache: Miss from cloudfront
+Cache-Control: no-cache

@@ -1,0 +1,15 @@
+X-Amz-Cf-Id: DPfmTUbkIJh9ic-RgnOGnJpEGmP4I0kQpNfp3rdwdcDnV4hKUcgBdw==
+Content-Language: en-GB
+Server: Server
+Content-Encoding: gzip
+Set-Cookie: session-token=wkW40wm4YgUz+LImB9tSSDsc8fb+I/+262FNIDmOKeU3ur8aUJv7BVsn6m8t+LcqNgEOhdhvTEFMEzyJtR0wiKj9ooBYT6WIi5sOyIzDeRd8S3pHWkjWJAkQWg4WRNQ2DJc4vN7iqeXIGOBVefX05O38BliK/7l44d0XQmxdryw4os/T4dzmeOQ0bAAgGp5L; Domain=.amazon.co.uk; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Via: 1.1 e543b10b13ecc240409e205c2e76267e.cloudfront.net (CloudFront)
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+Date: Wed, 15 Nov 2017 16:10:21 GMT
+Content-Type: text/html;charset=UTF-8
+Vary: Accept-Encoding,User-Agent
+Expires: -1
+Pragma: no-cache
+X-Cache: Miss from cloudfront
+Cache-Control: no-cache

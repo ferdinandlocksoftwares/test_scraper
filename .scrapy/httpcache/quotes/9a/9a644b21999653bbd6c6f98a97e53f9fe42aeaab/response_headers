@@ -1,0 +1,15 @@
+Expires: -1
+Content-Type: text/html;charset=UTF-8
+Pragma: no-cache
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Set-Cookie: session-token=MdloTcic8NLAcYOt8ZyFI5E3S+RVyBBfmL7jlH/SPxqoZLEPYmYjRgx6SmVgqdiYxMEJQx5Di823H2XUbdOGV5wRI2Y31dP04ZvjdyOVLpvYQSo4dZJODXZfOMl9IYAnBY8rMruAMUTaWIxDGO0jYHTAZKQfxpDwfZjHDSPsFq8dzqrX3q+dVv2dXcSFQkGE; Domain=.amazon.co.uk; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Content-Encoding: gzip
+Cache-Control: no-cache
+Vary: Accept-Encoding,User-Agent
+X-Cache: Error from cloudfront
+Via: 1.1 af2258de184ecee7791b144db97570b6.cloudfront.net (CloudFront)
+Server: Server
+Date: Fri, 10 Nov 2017 16:57:33 GMT
+P3P: policyref="https://www.amazon.co.uk/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Frame-Options: SAMEORIGIN
+X-Amz-Cf-Id: L1jQb66vEcUipzQtE44bG2f5dGEo4tcnksWZ21eJXz2DE34N5hW9IA==

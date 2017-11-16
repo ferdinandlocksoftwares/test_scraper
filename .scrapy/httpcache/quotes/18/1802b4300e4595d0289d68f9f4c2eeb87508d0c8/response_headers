@@ -1,0 +1,14 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 775eccfc3db436155f2d5fea77e7420a.cloudfront.net (CloudFront)
+Pragma: no-cache
+X-Cache: Miss from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 08:06:53 GMT
+Content-Language: fr-FR
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: qfJFIwSEnCShX2PHbJNLwrjFduyUNGWJe_WAPCA6rpqd2qu-Z3_6Nw==
+Content-Encoding: gzip

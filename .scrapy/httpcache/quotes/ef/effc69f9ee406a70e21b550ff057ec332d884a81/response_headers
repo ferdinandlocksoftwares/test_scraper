@@ -1,0 +1,15 @@
+X-Cache: Miss from cloudfront
+Content-Type: text/html;charset=UTF-8
+Server: Server
+Content-Language: en-US
+Set-Cookie: session-token=CHCAj9J024ZMdi9CLNRuMUm91/Yrh/h0jph5X5tXZstVOKOelfshPjiqlQQFBEfK+6IXvoUuKMCePw5ra1aqeY3lfHMl3WuZqXjj3wADqdm8fpNvmUz772e1KhmMBcMbJ4JqtsaMko+FRRCofWbEPrvVZomu3YVDzkL6csvCQ2hY5A1kjnVpiB7OTZHzRzS+; Domain=.amazon.com; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Pragma: no-cache
+Date: Fri, 10 Nov 2017 13:15:14 GMT
+Cache-Control: no-cache
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+X-Amz-Cf-Id: 2qx3ZT8CgJEdx7Uz0cQ5xQdYm_Sqw9lO4creEbYeV979ud34NsXyyw==
+Expires: -1
+Via: 1.1 19a0d1c82bae58d0947cf8e5bf899548.cloudfront.net (CloudFront)
+Content-Encoding: gzip
+Vary: Accept-Encoding,User-Agent

@@ -1,0 +1,15 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 7fdbb51d3898069adb076093148ebbc6.cloudfront.net (CloudFront)
+Pragma: no-cache
+Set-Cookie: session-token=cBI5OxITa3rz0SKwxENYazmhrlkdJd6wNwcWow94ofjxs3E5A/+4s7MVq8XTsBlO6GzyGzuF0D2psFZKLQrn9cYhiPXG25xZEjL6yno2UTivzDhE/nm/MK3EB+z/vreiBXviCERzTREaXTZV4cAC/Fzn0huxHZdOCqUnJu04/onoP5GqiY+j7tDxzaPy7SkO; Domain=.amazon.ca; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+X-Cache: Miss from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 07:53:35 GMT
+Content-Language: en-CA
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: Ij9IaVxWg9JXUUDaDI5_7lIRBn6bF9fRwhiQcU3y9t-9r4vNeSeHnQ==
+Content-Encoding: gzip

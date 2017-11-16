@@ -1,0 +1,15 @@
+Expires: -1
+Content-Type: text/html;charset=UTF-8
+Pragma: no-cache
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Set-Cookie: session-id=262-1299595-3322069; Domain=.amazon.co.uk; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Content-Encoding: gzip
+Cache-Control: no-cache
+Vary: Accept-Encoding,User-Agent
+X-Cache: Error from cloudfront
+Via: 1.1 1e37e58235bce32796909427e015e462.cloudfront.net (CloudFront)
+Server: Server
+Date: Fri, 10 Nov 2017 16:57:07 GMT
+P3P: policyref="https://www.amazon.co.uk/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "
+X-Frame-Options: SAMEORIGIN
+X-Amz-Cf-Id: NfU8juwdcLWV4ybSgCLk1FrAQn_xnlfArt1m6PgF6N5NUIAArAUqMw==

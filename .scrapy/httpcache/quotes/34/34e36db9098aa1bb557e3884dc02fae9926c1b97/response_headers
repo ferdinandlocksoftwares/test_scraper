@@ -1,0 +1,25 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 cad5f08e3928224621bb5645cf2de2d7.cloudfront.net (CloudFront)
+Pragma: no-cache
+Set-Cookie: session-id=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: session-id-time=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: session-token=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: ubid-acbit=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: at-acbit=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: lc-acbit=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: x-acbit=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: x-wl-uid=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: sess-at-acbit=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: UserPref=-; path=/; domain=.www.amazon.it; expires=Sun, 13-Nov-2005 08:17:41 GMT
+Set-Cookie: session-id=259-7117766-1832826; Domain=.amazon.it; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+Set-Cookie: session-id-time=2082787201l; Domain=.amazon.it; Expires=Tue, 01-Jan-2036 08:00:01 GMT; Path=/
+X-Cache: Error from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 08:17:42 GMT
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: bj1zrgbOI9l6ddXn1_uScqSSRO7DLchcRrQMF0qtKtAipNE3DMRMBA==
+Content-Encoding: gzip

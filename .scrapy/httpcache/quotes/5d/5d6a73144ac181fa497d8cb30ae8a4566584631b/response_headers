@@ -1,0 +1,14 @@
+Server: Server
+Vary: Accept-Encoding,User-Agent
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 13d6772a6c475529ef256f63777f2e74.cloudfront.net (CloudFront)
+Pragma: no-cache
+X-Cache: Error from cloudfront
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=47474747; includeSubDomains; preload
+Date: Mon, 13 Nov 2017 08:14:56 GMT
+Cache-Control: no-cache
+Expires: -1
+X-Amz-Cf-Id: XKTIU8lJCmK-5V7h8dngoqDYlI7SN_x7J_ga_6ms-LxBXrI_L0xIMQ==
+Content-Encoding: gzip
+P3P: policyref="https://www.amazon.de/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC "

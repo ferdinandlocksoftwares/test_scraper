@@ -1,0 +1,8 @@
+Server: Server
+Via: 1.1 c2246ef86073f296a538efadca4e7e0a.cloudfront.net (CloudFront)
+Date: Mon, 13 Nov 2017 07:40:25 GMT
+X-Amz-Cf-Id: pCClS-Sh0K0T31Ts8KADXJFJ0FqZN-LPRJk7kwR8qo42ubD94C7iyg==
+Content-Type: text/html
+Vary: Content-Type,Host,Accept-Encoding,User-Agent
+X-Cache: Miss from cloudfront
+Content-Encoding: gzip
