@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.http import Request
-import MySQLdb
 import html
 import json
 import re
@@ -41,9 +40,9 @@ class ProductreviewSpider(scrapy.Spider):
 		else:
 			self.sellers_country = ['uk', 'de', 'es', 'it', 'fr']
 
-	def create_cursor_db2_connnection(self):
-		self.connection = MySQLdb.connect(self.host, self.user, self.password, self.db2)
-		self.cursor = self.connection.cursor()
+	# def create_cursor_db2_connnection(self):
+	# 	self.connection = MySQLdb.connect(self.host, self.user, self.password, self.db2)
+	# 	self.cursor = self.connection.cursor()
 
 	def start_requests(self):
 		for seller in self.sellers_country:
