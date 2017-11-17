@@ -92,7 +92,7 @@ class ProductreviewSpider(scrapy.Spider):
 				# review_dict.append({'date_of_changed': 1})
 				# self.save_product_data(response, review_dict)
 				pr_url = "/product-reviews/"+asin+"/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&pageSize=100&sortBy=recent&pageNumber=1"
-				pr_url = response.urljoin(new_url)
+				pr_url = response.urljoin(pr_url)
 				if (nb_of_reviews is not Non) or (nb_of_reviews > 0):
 					# start parsing product reviews
 					yield scrapy.Request(pr_url, callback=self.parse_product_reviews)
