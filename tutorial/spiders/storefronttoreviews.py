@@ -6,8 +6,8 @@ import re
 import os
 
 
-class ProductreviewSpider(scrapy.Spider):
-	name = "productreview"
+class StorefronttoreviewSpider(scrapy.Spider):
+	name = "storefronttoreview"
 	#declaration for allowed domains, httpstatus and db connection
 	# allowed_domains = ['amazon.com','amazon.co.uk','amazon.de','amazon.fr', 'amazon.it','amazon.ca', 'amazon.es']
 	handle_httpstatus_list = [404, 301, 302, 303, 307]
@@ -15,9 +15,11 @@ class ProductreviewSpider(scrapy.Spider):
 	dir_path = ''
 
 	#declaration for variable used
-	country = None
-	asin_list = None
 	seller_id = None
+	country = ""
+	sellers_country = None
+	mkp = None
+	mws_seller_id = None
 
 	def url_to_country(self, url):
 		c = url.split('.')[-1]
@@ -27,24 +29,55 @@ class ProductreviewSpider(scrapy.Spider):
 			return c
 
 	def __init__(self, *args, **kwargs):
-		super(ProductreviewSpider, self).__init__(*args, **kwargs)
-		self.country = str(self.cty).lower()
+		super(StorefronttoreviewSpider, self).__init__(*args, **kwargs)
 		self.seller_id = str(self.sid)
-		if self.country == 'gb':
-			self.country = 'uk'
-		self.asin_list = str(self.asin).split(',')
+		self.mkp = str(self.mkp_id)
+		self.mws_seller_id = str(self.msid)
+
+		if self.mkp == '1':
+			self.sellers_country = ['us', 'ca']
+		else:
+			self.sellers_country = ['uk', 'de', 'es', 'it', 'fr']
 
 	def start_requests(self):
-		for asin in self.asin_list:
+		for seller in self.sellers_country:
+			self.country  = seller.lower()
+			# change the country from gb to uk
+			if self.country == 'gb':
+				self.country = 'uk'
+			
 			# start parsing store fronts
 			if self.country == 'uk':
-				url = "https://www.amazon.co.uk/product-reviews/"+asin+"/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&pageSize=100&sortBy=recent&pageNumber=1"
+				url = "https://www.amazon.co.uk/s/ref=sr_pg_1?me="+self.mws_seller_id
 			elif self.country == 'us':
-				url = "https://www.amazon.com/product-reviews/"+asin+"/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&pageSize=100&sortBy=recent&pageNumber=1"
+				url = "https://www.amazon.com/s/ref=sr_pg_1?me="+self.mws_seller_id
 			else:
-				url = "https://www.amazon."+self.country+"/product-reviews/"+asin+"/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&pageSize=100&sortBy=recent&pageNumber=1"
+				url = "https://www.amazon."+self.country+"/s/ref=sr_pg_1?me="+self.mws_seller_id
 
-			yield Request(url, callback=self.parse_product_reviews)
+			yield Request(url, callback=self.parse_store_front)
+
+	def parse_store_front(self, response):
+		if response.status == 200:
+			for product in response.css('ul#s-results-list-atf li'):
+				asin = product.css('::attr(data-asin)').extract_first()
+				country = self.url_to_country(response.url.split('/')[2]).lower()
+				nb_of_reviews = product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract()
+				nb_of_reviews = nb_of_reviews[-1]
+				product_rating = product.css('div.s-item-container div.a-row.a-spacing-none span span a span.a-icon-alt::text').extract_first().split(' ')[0]
+				prod_title = product.css('div.s-item-container div div a.s-access-detail-page::attr(title)').extract_first()
+				yield {
+					'review_product' : {
+						'asin' : asin,
+						'country' : country,
+						'product_title' : prod_title,
+						'product_rating': product_rating.replace(',', '.'),
+						'nb_of_reviews' : nb_of_reviews
+					}
+				}
+				pr_url = "/product-reviews/"+asin+"/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&pageSize=100&sortBy=recent&pageNumber=1"
+				pr_url = response.urljoin(pr_url)
+				if (nb_of_reviews is not None) or (int(nb_of_reviews) > 0):
+					yield scrapy.Request(pr_url, callback=self.parse_product_reviews)
 
 	def parse_product_reviews(self, response):
 		if response.status == 200:
@@ -52,10 +85,9 @@ class ProductreviewSpider(scrapy.Spider):
 				for review in response.css('div#cm_cr-review_list.review-views div.review'):
 					yield {
 						"reviews" :  {
-							"seller_id" : self.seller_id,
 							"review_code" : review.css('::attr(id)').extract_first(),
 							"asin" : response.url.split('/')[4],
-							"country" : self.country,
+							"country" : self.url_to_country(response.url.split('/')[2]),
 							"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
 							"review_title" : review.css('a.review-title::text').extract_first(),
 							"author" : review.css('a.author::text').extract_first(),
@@ -75,7 +107,7 @@ class ProductreviewSpider(scrapy.Spider):
 					rr += 1
 					new_url[-1] = str(rr)
 					next_page = '='.join(new_url)
-					yield response.follow(next_page, callback=self.parse_product_reviews)
+					yield scrapy.Request(next_page, callback=self.parse_product_reviews)
 
 		else:
 			if response.status == 404:
@@ -83,6 +115,13 @@ class ProductreviewSpider(scrapy.Spider):
 
 			elif response.status in [301, 302, 303, 307]:
 				self.response_redirect(response)
+
+	def save_product_data(self, response, review_dict):
+		r = json.dumps(review_dict)
+		filename = os.path.join(self.dir_path, 'product-info-'+str(self.seller_id)+'-'+self.url_to_country(response.url.split('/')[2]).lower()+'.json')
+		with open(filename, 'a+') as f:
+			f.write(r+'\n')
+			f.close()
 
 	def response_404(self, response):
 		yield {
