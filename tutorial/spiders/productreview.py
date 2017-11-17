@@ -76,6 +76,7 @@ class ProductreviewSpider(scrapy.Spider):
 				asin = product.css('::attr(data-asin)').extract_first()
 				country = self.url_to_country(response.url.split('/')[2]).lower()
 				nb_of_reviews = product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract()
+				nb_of_reviews = nb_of_reviews[-1]
 				# nb_of_reviews = 0;
 				# for nb in product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract():
 				# 	if isinstance(nb, (int, float)):
@@ -109,13 +110,13 @@ class ProductreviewSpider(scrapy.Spider):
 				#yield/go to link for the next page
 				next_page = response.css('li.a-last a::attr(href)').extract_first()
 				if next_page is not None:
-					new_url = response.url.split('/')
+					new_url = response.url.split('=')
 					rr = new_url[-1]
 					rr = int(rr)
 					rr += 1
 					new_url[-1] = str(rr)
 					# next_page = response.urljoin(next_page)
-					next_page = '/'.join(new_url)
+					next_page = '='.join(new_url)
 					yield scrapy.Request(next_page, callback=self.parse_product_reviews)
 
 		else:
