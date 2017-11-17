@@ -9,7 +9,7 @@ import os
 class ProductreviewSpider(scrapy.Spider):
 	name = "productreview"
 	#declaration for allowed domains, httpstatus and db connection
-	allowed_domains = ['amazon.com','amazon.co.uk','amazon.de','amazon.fr', 'amazon.it','amazon.ca', 'amazon.es']
+	# allowed_domains = ['amazon.com','amazon.co.uk','amazon.de','amazon.fr', 'amazon.it','amazon.ca', 'amazon.es']
 	handle_httpstatus_list = [404, 301, 302, 303, 307]
 	handle_httpstatus_all = True
 	dir_path = ''
@@ -77,10 +77,6 @@ class ProductreviewSpider(scrapy.Spider):
 				country = self.url_to_country(response.url.split('/')[2]).lower()
 				nb_of_reviews = product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract()
 				nb_of_reviews = nb_of_reviews[-1]
-				# nb_of_reviews = 0;
-				# for nb in product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract():
-				# 	if isinstance(nb, (int, float)):
-				# 		nb_of_reviews = nb
 				product_rating = product.css('div.s-item-container div.a-row.a-spacing-none span span a span.a-icon-alt::text').extract_first().split(' ')[0]
 				prod_title = product.css('div.s-item-container div div a.s-access-detail-page::attr(title)').extract_first()
 				# review_dict =  {
@@ -98,14 +94,31 @@ class ProductreviewSpider(scrapy.Spider):
 				# self.save_product_data(response, review_dict)
 				pr_url = "/product-reviews/"+asin+"/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&pageSize=100&sortBy=recent&pageNumber=1"
 				pr_url = response.urljoin(pr_url)
-				if (nb_of_reviews is not None) or (nb_of_reviews > 0):
+				if (nb_of_reviews is not None) or (int(nb_of_reviews) > 0):
 					# start parsing product reviews
 					yield scrapy.Request(pr_url, callback=self.parse_product_reviews)
 
 	def parse_product_reviews(self, response):
 		if response.status == 200:
-			if response.css('div.reviews-content div#cm_cr-review_list'):
-				self.save_product_reviews(response)
+			if response.css('div#cm_cr-review_list.review-views'):
+				# self.save_product_reviews(response)
+				for review in response.css('div#cm_cr-review_list.review-views div.review'):
+					reviews =  {
+						"review_code" : review.css('::attr(id)').extract_first(),
+						"asin" : response.url.split('/')[4],
+						"country" : self.url_to_country(response.url.split('/')[2]),
+						"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
+						"review_title" : review.css('a.review-title::text').extract_first(),
+						"author" : review.css('a.author::text').extract_first(),
+						"review_date" : review.css('span.review-date::text').extract_first(),
+						"variation" : review.css('div.review-data.review-format-strip a::text').extract_first(),
+						"verified_purchase" : review.css('span.a-declarative a span::text').extract_first(),
+						"review_text" : review.css('span.review-text::text').extract_first(),
+						"author_url" : response.urljoin(review.css('a.author::attr(href)').extract_first())
+					}
+					yield {
+						'reviews': reviews
+					}
 
 				#yield/go to link for the next page
 				next_page = response.css('li.a-last a::attr(href)').extract_first()
@@ -127,22 +140,24 @@ class ProductreviewSpider(scrapy.Spider):
 				self.response_redirect(response)
 
 	def save_product_reviews(self, response):
-		for review in response.css('div.reviews-content div#cm_cr-review_list div.review'):
-			# review_dict = {
+		print('awawawaw')
+		for review in response.css('div#cm_cr-review_list.review-views div.review'):
+			reviews =  {
+				"review_code" : review.css('::attr(id)').extract_first(),
+				"asin" : response.url.split('/')[4],
+				"country" : self.url_to_country(response.url.split('/')[2]),
+				"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
+				"review_title" : review.css('a.review-title::text').extract_first(),
+				"author" : review.css('a.author::text').extract_first(),
+				"review_date" : review.css('span.review-date::text').extract_first(),
+				"variation" : review.css('div.review-data.review-format-strip a::text').extract_first(),
+				"verified_purchase" : review.css('span.a-declarative a span::text').extract_first(),
+				"review_text" : review.css('span.review-text::text').extract_first(),
+				"author_url" : response.urljoin(review.css('a.author::attr(href)').extract_first())
+			}
+			print(reviews)
 			yield {
-				"reviews": {
-					"review_code" : review.css('::attr(id)').extract_first(),
-					"asin" : response.url.split('/')[4],
-					"country" : self.url_to_country(response.url.split('/')[2]),
-					"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
-					"review_title" : review.css('a.review-title::text').extract_first(),
-					"author" : review.css('a.author::text').extract_first(),
-					"review_date" : review.css('span.review-date::text').extract_first(),
-					"variation" : review.css('div.review-data.review-format-strip a::text').extract_first(),
-					"verified_purchase" : review.css('span.a-declarative a span::text').extract_first(),
-					"review_text" : review.css('span.review-text::text').extract_first(),
-					"author_url" : response.urljoin(review.css('a.author::attr(href)').extract_first())
-				}
+				'reviews': reviews
 			}
 			# r = json.dumps(review_dict)
 			# filename = os.path.join(self.dir_path, 'product-reviews-'+str(self.seller_id)+'-'+self.url_to_country(response.url.split('/')[2]).lower()+'.json')
