@@ -100,7 +100,7 @@ class ProductreviewSpider(scrapy.Spider):
 	def parse_product_reviews(self, response):
 		if response.status == 200:
 			if response.css('div.reviews-content div#cm_cr-review_list'):
-				self.save_product_reviews()
+				self.save_product_reviews(response)
 
 				#yield/go to link for the next page
 				next_page = response.css('li.a-last a::attr(href)').extract_first()
