@@ -57,23 +57,30 @@ class StorefrontSpider(scrapy.Spider):
 
 	def parse_store_front(self, response):
 		if response.status == 200:
-			for product in response.css('div#atfResults ul#s-results-list-atf li.s-result-item'):
+			for product in response.css('li.s-result-item'):
 				asin = product.css('::attr(data-asin)').extract_first()
 				country = self.url_to_country(response.url.split('/')[2]).lower()
 				nb_of_reviews = product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract()
-				nb_of_reviews = nb_of_reviews[-1]
-				product_rating = product.css('div.s-item-container div.a-row.a-spacing-none span span a span.a-icon-alt::text').extract_first().split(' ')[0]
+				if len(nb_of_reviews) > 0:
+					nb_of_reviews = nb_of_reviews[-1]
+				else:
+					nb_of_reviews = "0"
+				product_rating = product.css('div.s-item-container div.a-row.a-spacing-none span span a span.a-icon-alt::text').extract_first()
+				if product_rating is not None:
+					product_rating = product_rating.split(' ')[0].replace(',', '.')
+				else:
+					product_rating = "0"
 				prod_title = product.css('div.s-item-container div div a.s-access-detail-page::attr(title)').extract_first()
 				yield {
 					'seller_id' : self.seller_id,
 					'asin' : asin,
 					'country' : country,
 					'product_title' : prod_title,
-					'product_rating': product_rating.replace(',', '.'),
+					'product_rating': product_rating,
 					'nb_of_reviews' : nb_of_reviews
 				}
 
-			next_page = response.css('span.pagnRa a#pagnNextLink.pagnNext::attr(href)').extract_first()
+			next_page = response.css('a#pagnNextLink.pagnNext::attr(href)').extract_first()
 			if next_page is not None:
 				next_page = response.urljoin(next_page)
-				yield scrapy.Request(next_page, callback=self.parse_store_front)
+				yield response.follow(next_page, callback=self.parse_store_front)

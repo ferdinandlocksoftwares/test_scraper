@@ -55,7 +55,7 @@ class ProductreviewSpider(scrapy.Spider):
 							"seller_id" : self.seller_id,
 							"review_code" : review.css('::attr(id)').extract_first(),
 							"asin" : response.url.split('/')[4],
-							"country" : self.url_to_country(response.url.split('/')[2]),
+							"country" : self.country,
 							"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
 							"review_title" : review.css('a.review-title::text').extract_first(),
 							"author" : review.css('a.author::text').extract_first(),
@@ -75,7 +75,7 @@ class ProductreviewSpider(scrapy.Spider):
 					rr += 1
 					new_url[-1] = str(rr)
 					next_page = '='.join(new_url)
-					yield scrapy.Request(next_page, callback=self.parse_product_reviews)
+					yield response.follow(next_page, callback=self.parse_product_reviews)
 
 		else:
 			if response.status == 404:
