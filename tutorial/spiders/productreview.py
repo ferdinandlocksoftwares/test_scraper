@@ -75,7 +75,11 @@ class ProductreviewSpider(scrapy.Spider):
 			for product in response.css('ul#s-results-list-atf li'):
 				asin = product.css('::attr(data-asin)').extract_first()
 				country = self.url_to_country(response.url.split('/')[2]).lower()
-				nb_of_reviews = product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract_first()
+				# nb_of_reviews = product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract_first()
+				nb_of_reviews = 0;
+				for nb in product.css('div.s-item-container div.a-row.a-spacing-none a::text').extract():
+					if isinstance(nb, (int, float)):
+						nb_of_reviews = nb
 				product_rating = product.css('div.s-item-container div.a-row.a-spacing-none span span a span.a-icon-alt::text').extract_first().split(' ')[0]
 				prod_title = product.css('div.s-item-container div div a.s-access-detail-page::attr(title)').extract_first()
 				# review_dict =  {
@@ -84,7 +88,7 @@ class ProductreviewSpider(scrapy.Spider):
 						'asin' : asin,
 						'country' : country,
 						'product_title' : prod_title,
-						'product_rating': product_rating,
+						'product_rating': product_rating.replace(',', '.'),
 						'nb_of_reviews' : nb_of_reviews
 					}
 				}
@@ -106,7 +110,8 @@ class ProductreviewSpider(scrapy.Spider):
 				next_page = response.css('li.a-last a::attr(href)').extract_first()
 				if next_page is not None:
 					new_url = response.url.split('/')
-					new_url[-1] = new_url[-1]+1
+					new_url[-1] = int(new_url[-1]) + 1
+					new_url[-1] = str(new_url[-1])
 					# next_page = response.urljoin(next_page)
 					next_page = '/'.join(new_url)
 					yield scrapy.Request(next_page, callback=self.parse_product_reviews)
@@ -126,7 +131,7 @@ class ProductreviewSpider(scrapy.Spider):
 					"review_code" : review.css('::attr(id)').extract_first(),
 					"asin" : response.url.split('/')[4],
 					"country" : self.url_to_country(response.url.split('/')[2]),
-					"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0],
+					"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
 					"review_title" : review.css('a.review-title::text').extract_first(),
 					"author" : review.css('a.author::text').extract_first(),
 					"review_date" : review.css('span.review-date::text').extract_first(),
