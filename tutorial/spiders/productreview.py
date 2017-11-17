@@ -34,7 +34,7 @@ class ProductreviewSpider(scrapy.Spider):
 		self.mkp = str(self.mkp_id)
 		self.mws_seller_id = str(self.msid)
 
-		if self.mkp == 1:
+		if self.mkp == '1':
 			self.sellers_country = ['us', 'ca']
 		else:
 			self.sellers_country = ['uk', 'de', 'es', 'it', 'fr']
