@@ -51,20 +51,18 @@ class ProductreviewSpider(scrapy.Spider):
 			if response.css('div#cm_cr-review_list.review-views'):
 				for review in response.css('div#cm_cr-review_list.review-views div.review'):
 					yield {
-						"reviews" :  {
-							"seller_id" : self.seller_id,
-							"review_code" : review.css('::attr(id)').extract_first(),
-							"asin" : response.url.split('/')[4],
-							"country" : self.country,
-							"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
-							"review_title" : review.css('a.review-title::text').extract_first(),
-							"author" : review.css('a.author::text').extract_first(),
-							"review_date" : review.css('span.review-date::text').extract_first(),
-							"variation" : review.css('div.review-data.review-format-strip a::text').extract_first(),
-							"verified_purchase" : review.css('span.a-declarative a span::text').extract_first(),
-							"review_text" : review.css('span.review-text::text').extract_first(),
-							"author_url" : response.urljoin(review.css('a.author::attr(href)').extract_first())
-						}
+						"seller_id" : self.seller_id,
+						"review_code" : review.css('::attr(id)').extract_first(),
+						"asin" : response.url.split('/')[4],
+						"country" : self.country,
+						"star" : review.css('i.review-rating span.a-icon-alt::text').extract_first().split(' ')[0].replace(',', '.'),
+						"review_title" : review.css('a.review-title::text').extract_first(),
+						"author" : review.css('a.author::text').extract_first(),
+						"review_date" : review.css('span.review-date::text').extract_first(),
+						"variation" : review.css('div.review-data.review-format-strip a::text').extract_first(),
+						"verified_purchase" : review.css('span.a-declarative a span::text').extract_first(),
+						"review_text" : review.css('span.review-text::text').extract_first(),
+						"author_url" : response.urljoin(review.css('a.author::attr(href)').extract_first())
 					}
 
 				next_page = response.css('li.a-last a::attr(href)').extract_first()
